@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://massage-amma-chambery.fr/sitemap.xml
