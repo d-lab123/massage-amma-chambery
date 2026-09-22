@@ -9,7 +9,7 @@ const TarifsPro = ({ onSelectFormula }) => {
       price: "520 €",
       tax: "HT / jour",
       features: [
-        "1 journée d'intervention (7h de présence)",
+        "1 journée d'intervention (5h de présence)",
         "Votre praticien unique certifié (qualité et confiance constantes)",
         (
           <span key="planning-1" className="block">
