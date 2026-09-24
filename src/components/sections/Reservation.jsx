@@ -39,7 +39,7 @@ const Reservation = () => {
     };
 
     try {
-      const response = await fetch('https://hook.eu1.make.com/cidbe65fbeqi9psoy7rmvx0uqj3hhh93', {
+      const response = await fetch('https://hook.eu1.make.com/4e2mbvqyvetq8c83v1ivbha2zpsifd5n', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
