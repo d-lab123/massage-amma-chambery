@@ -1,12 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/layout/Header';
 import Hero from './components/sections/Hero';
 import Particuliers from './components/sections/Particuliers';
 import Reservation from './components/sections/Reservation';
+import PrivacyModal from './components/ui/PrivacyModal';
 import { motion, useScroll, useSpring } from 'framer-motion';
 
 function App() {
   const [selectedFormula, setSelectedFormula] = React.useState('');
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
+
+  // Détecter l'ancre #politique-de-confidentialite dans l'URL
+  useEffect(() => {
+    const handleHash = () => {
+      if (typeof window !== 'undefined' && window.location.hash === '#politique-de-confidentialite') {
+        setIsPrivacyOpen(true);
+      }
+    };
+
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
+  }, []);
+
+  const handleOpenPrivacy = (e) => {
+    if (e) e.preventDefault();
+    setIsPrivacyOpen(true);
+    if (typeof window !== 'undefined') {
+      window.location.hash = 'politique-de-confidentialite';
+    }
+  };
+
+  const handleClosePrivacy = () => {
+    setIsPrivacyOpen(false);
+    if (typeof window !== 'undefined' && window.location.hash === '#politique-de-confidentialite') {
+      window.history.pushState(null, '', window.location.pathname + window.location.search);
+    }
+  };
+
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -104,11 +135,22 @@ function App() {
               </ul>
             </div>
           </div>
-          <div className="pt-8 border-t border-white/10 text-center text-gray-500 text-xs">
-            <p suppressHydrationWarning>© {new Date().getFullYear()} Massage Amma Chambéry. Tous droits réservés. Réalisé avec sérénité.</p>
+          <div className="pt-8 border-t border-white/10 text-center text-gray-500 text-xs flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+            <p suppressHydrationWarning>© {new Date().getFullYear()} Massage Amma Chambéry. Tous droits réservés.</p>
+            <span className="hidden sm:inline text-gray-600">•</span>
+            <a
+              href="#politique-de-confidentialite"
+              onClick={handleOpenPrivacy}
+              className="text-gray-400 hover:text-white transition-colors underline underline-offset-4 cursor-pointer"
+            >
+              Politique de confidentialité
+            </a>
           </div>
         </div>
       </footer>
+
+      {/* Fenêtre Modale de Politique de Confidentialité */}
+      <PrivacyModal isOpen={isPrivacyOpen} onClose={handleClosePrivacy} />
     </div>
   );
 }
