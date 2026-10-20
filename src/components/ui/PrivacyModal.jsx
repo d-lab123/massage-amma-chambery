@@ -114,7 +114,7 @@ const PrivacyModal = ({ isOpen, onClose }) => {
                   Pour traiter efficacement votre demande dans le respect de votre sécurité, les outils suivants sont utilisés :
                 </p>
                 <ul className="list-disc pl-5 mt-2 space-y-1">
-                  <li><strong>Make.com :</strong> Outil d'automatisation technique permettant l'acheminement sécurisé des réservations.</li>
+                  <li><strong>n8n :</strong> Outil d'automatisation technique permettant l'acheminement sécurisé des réservations.</li>
                   <li><strong>Google Sheets & Google Workspace (Gmail) :</strong> Outils bureautiques sécurisés pour la tenue de l'agenda, l'enregistrement des devis et la communication par e-mail.</li>
                   <li><strong>Hostinger :</strong> Hébergeur du site internet assurant le protocole de chiffrement SSL/HTTPS.</li>
                 </ul>

@@ -39,7 +39,7 @@ const Reservation = () => {
     };
 
     try {
-      const response = await fetch('https://hook.eu1.make.com/4e2mbvqyvetq8c83v1ivbha2zpsifd5n', {
+      const response = await fetch('https://sebastien-n8n.duckdns.org/webhook/35086870-4cee-4a31-b1d4-1ba7decf2d4a', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
