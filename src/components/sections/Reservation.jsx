@@ -39,7 +39,7 @@ const Reservation = () => {
     };
 
     try {
-      const response = await fetch(' https://sebastien-n8n.duckdns.org/webhook/35086870-4cee-4a31-b1d4-1ba7decf2d4a', {
+      const response = await fetch('https://sebastien-n8n.duckdns.org/webhook-test/35086870-4cee-4a31-b1d4-1ba7decf2d4a', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
