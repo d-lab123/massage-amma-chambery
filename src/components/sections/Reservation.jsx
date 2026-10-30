@@ -49,6 +49,13 @@ const Reservation = () => {
 
       if (response.ok) {
         setSubmitStatus('success');
+
+        // Suivi de conversion Google Ads
+        if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+          window.gtag('event', 'conversion', {
+            send_to: 'AW-11234482860'
+          });
+        }
         setFormData({
           society: '',
           fullName: '',
