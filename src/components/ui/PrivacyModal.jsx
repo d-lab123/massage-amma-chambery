@@ -121,10 +121,24 @@ const PrivacyModal = ({ isOpen, onClose }) => {
               </section>
 
               <section>
-                <h4 className="text-base font-semibold text-gray-900 mb-2 font-serif">5. Publicité Google Ads et mesure de conversion</h4>
+                <h4 className="text-base font-semibold text-gray-900 mb-2 font-serif">5. Cookies, mesure d'audience (Google Analytics) et publicité (Google Ads)</h4>
                 <p>
-                  Ce site utilise la balise officielle <strong>Google Tag (gtag.js)</strong> dans le cadre de campagnes publicitaires Google Ads. Cette balise permet de mesurer anonymement l'efficacité de nos annonces publicitaires lorsqu'une demande de devis est soumise. Aucune donnée nominative de santé n'est transmise à des réseaux publicitaires.
+                  Notre site utilise des technologies de suivi fournies par <strong>Google Ireland Limited</strong> afin d'améliorer votre expérience de navigation, d'analyser la fréquentation du site et de mesurer l'efficacité de nos campagnes publicitaires :
                 </p>
+                <ul className="list-disc pl-5 mt-2 space-y-2">
+                  <li>
+                    <strong>Google Analytics (Mesure d'audience) :</strong> Cet outil nous permet de collecter des données statistiques pseudonymisées de navigation (pages consultées, temps passé, type d'appareil, localisation géographique approximative). Les adresses IP sont automatiquement masquées par Google. Ces données nous aident à comprendre l'intérêt des visiteurs pour adapter nos offres et améliorer le site.
+                  </li>
+                  <li>
+                    <strong>Google Ads (Suivi des conversions) :</strong> La balise Google Tag nous permet de mesurer si une visite issue d'une annonce publicitaire a abouti à une prise de contact via notre formulaire. Pour assurer la précision de ce suivi (&quot;Conversions améliorées&quot;), certaines données saisies dans le formulaire (comme l'adresse e-mail) sont hachées de manière sécurisée et irréversible par votre navigateur avant d'être transmises à Google. Aucune donnée de santé n'est transmise.
+                  </li>
+                  <li>
+                    <strong>Bandeau de consentement et base légale :</strong> Conformément aux directives de la CNIL et au RGPD, le dépôt ou la lecture de ces cookies d'analyse et de publicité sur votre terminal repose exclusivement sur votre consentement préalable (article 6.1.a du RGPD). La gestion de vos préférences est assurée par notre solution certifiée. Aucun cookie soumis au consentement n'est déposé tant que vous n'avez pas cliqué sur « Accepter ».
+                  </li>
+                  <li>
+                    <strong>Modification ou retrait de votre consentement :</strong> Vous pouvez à tout moment modifier vos choix, accepter ou refuser l'ensemble des cookies en cliquant sur l'icône de gestion des cookies présente en bas de votre écran, ou en effaçant les cookies depuis les paramètres de votre navigateur. Votre choix de consentement est conservé pour une durée de 6 mois.
+                  </li>
+                </ul>
               </section>
 
               <section>
