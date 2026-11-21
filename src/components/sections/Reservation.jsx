@@ -50,10 +50,12 @@ const Reservation = () => {
       if (response.ok) {
         setSubmitStatus('success');
 
-        // Suivi de conversion Google Ads
+        // Suivi de conversion Google Ads (Envoi de formulaire de lead)
         if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
           window.gtag('event', 'conversion', {
-            send_to: 'AW-18553339337'
+            send_to: 'AW-18553339337/bmfnCJrBuLYdEMn79Y5F',
+            value: 1.0,
+            currency: 'EUR'
           });
         }
         setFormData({
